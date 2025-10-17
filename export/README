@@ -1,0 +1,2 @@
+This is the directory where various files will be exported to during the flow. 
+Note that full databases for design restore will be saved under the ../dbs folder.

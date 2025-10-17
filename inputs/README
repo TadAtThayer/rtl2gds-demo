@@ -1,0 +1,9 @@
+This directory has all the inputs to your design (other than the RTL), such as:
+- Library definitions
+- SDC and MMMC definitions
+- General DEFINE file for your design
+- Floorplan inputs
+
+Note that the files are purposely named "my-design.*", while the scripts all call "<toplevel>.*"
+This is on purpose, so you will carefully edit (...rewrite) all of these files and rename them before use.
+The examples provided are just templates for what your files could look like and could include.

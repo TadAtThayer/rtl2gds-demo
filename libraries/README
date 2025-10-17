@@ -1,0 +1,9 @@
+This library should contain all the definitions that are specific to:
+- The process technology
+- The standard cell libraries
+- The IO libraries
+- The compiled memory cuts
+- Additional IP libraries
+
+You need to update the files once per process technology and for each specific IP/library you use
+But then you can share these files between your projects in the same technology/using the same IPs.
