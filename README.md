@@ -21,6 +21,7 @@ The rest of the directories include:
 - *dbs/* - The output directory, where all restore point databases will be stored.
 - *mem_gen/* - An example directory where compiled SRAM cuts could be generated and stored in (optional).
 - *apps/* - A directory for putting C-code that can run on the PULP toolchain that is provided in the example
+- *docs/* - A set of supporting documents (user manuals), written by Prof. Teman and provided to you for a deeper dive into the material.
 
 ## Acknowledgement
 
