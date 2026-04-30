@@ -1,12 +1,12 @@
 # Hierarchy
-set design(FULLCHIP_OR_MACRO) "FULLCHIP"; #FULLCHIP includes IO Ring
+set design(FULLCHIP_OR_MACRO) "MACRO"; #FULLCHIP includes IO Ring
 set design(HAS_SCAN)          "no"; # Are there scan ports
 
 #############################################
 #     Technology Definition
 #############################################
-set TECHNOLOGY		"" ; # Name of process technology (usually used in path to files)
-set SC_TECHNOLOGY	"" ; # Name of standard cell library (usually used in path to files)
+set TECHNOLOGY		"gpdk045_v_6_0" ; # Name of process technology (usually used in path to files)
+set SC_TECHNOLOGY	"gsclib045" ; # Name of standard cell library (usually used in path to files)
 set SRAM_TECHNOLOGY	"" ; # Name of SRAM Library (usually used in path to files)
 set IO_TECHNOLOGY	"" ; # Name of IO Library (usually used in path to files)
 
@@ -39,10 +39,6 @@ if {$design(FULLCHIP_OR_MACRO) == "FULLCHIP" } {
 
 # Hard Macros
 # The following variables are strings for grabbing the SRAM instances
-set design(imem0) "lp_riscv*iccm_ram_0_sram_sp_16384x32"
-set design(imem1) "lp_riscv*iccm_ram_1_sram_sp_16384x32"
-set design(dmem0) "lp_riscv*dccm_ram_0_sram_sp_16384x32"
-set design(dmem1) "lp_riscv*dccm_ram_1_sram_sp_16384x32"
 
 #############################################
 #       SDC Settings

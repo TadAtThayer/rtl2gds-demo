@@ -2,22 +2,22 @@
 #    Note that standard cell library setting are in a separate file
 #    to support various standard cell libraries
 #
-set METAL_STACK <metal stack - may be used in scripts>
-set TRACKS <may be used for standard cell library definition> 
-set_db design_process_node <process node in nm> ; # used by the set_db design_tech_node command that is loaded later
+set METAL_STACK NotSureWhatMetalStackShouldBeSetTo
+set TRACKS  NotSureWhatTracksShouldBeSetTo
+set_db design_process_node 45 ; # used by the set_db design_tech_node command that is loaded later
 
 
-set paths(PDK_ROOT) <path to PDK installation>
+set paths(PDK_ROOT) /thayerfs/courses/26spring/engs084/workspace/gpdk045_v_6_0
 
 # Technology Setup
-set paths(SC_ROOT) $paths(PDK_ROOT)/<path to standard cell installation>
-set paths(TECHNOLOGY_FILES) $paths(SC_ROOT)/<path to technology files>
+set paths(SC_ROOT) $paths(PDK_ROOT)/../std_cells/gsclib045_all_v4.8
+set paths(TECHNOLOGY_FILES) $paths(SC_ROOT)/gsclib045_tech
 
 # Parasitic Extraction 
-set tech_files(CAPTABLE_BC) $paths(TECHNOLOGY_FILES)/<path to captables>/rcbest.captbl
-set tech_files(CAPTABLE_TC) $paths(TECHNOLOGY_FILES)/<path to captables>/typical.captbl
-set tech_files(CAPTABLE_WC) $paths(TECHNOLOGY_FILES)/<path to captables>/rcworst.captbl
-set paths(QRC_ROOT) $paths(PDK_ROOT)/<path to qrc tech files>
+set tech_files(CAPTABLE_BC) $paths(TECHNOLOGY_FILES)/wazzatden/rcbest.captbl
+set tech_files(CAPTABLE_TC) $paths(TECHNOLOGY_FILES)/wazzatden/typical.captbl
+set tech_files(CAPTABLE_WC) $paths(TECHNOLOGY_FILES)/wazzatden/rcworst.captbl
+set paths(QRC_ROOT) $paths(PDK_ROOT)/qrc
 set tech_files(QRCTECH_FILE_TYPICAL) $paths(QRC_ROOT)/typical/qrcTechFile
 set tech_files(QRCTECH_FILE_CBEST) $paths(QRC_ROOT)/cbest/qrcTechFile
 set tech_files(QRCTECH_FILE_CWORST) $paths(QRC_ROOT)/cworst/qrcTechFile
@@ -38,8 +38,8 @@ set tech(LIB_SUPPRESS_MESSAGES_GENUS) "message-2"
 
 # DRC Related
 set tech(layer_names) "M0 M1 M2 M3 M4 M5 M6 M7 M8 M9" ; # update to names of your metal layers
-set tech(row_height) XXX ; # Vertical SITE
-set tech(grid_unit) XXX ; # Horizontal SITE
+set tech(row_height) 1.71 ; # Vertical SITE
+set tech(grid_unit) 0.2 ; # Horizontal SITE
 
 
 # Routing Rules

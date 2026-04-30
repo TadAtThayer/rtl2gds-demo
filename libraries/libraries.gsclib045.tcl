@@ -1,16 +1,16 @@
 # Library setting for your Standard Cell libraries
 
 # Libs
-set paths(STANDARD_CELLS_RVT)	$paths(SC_ROOT)/RVT
+set paths(STANDARD_CELLS_RVT)	$paths(SC_ROOT)/GSCLIB045
 lappend paths(LIB_paths) "$paths(STANDARD_CELLS_RVT)/lib/"
-set paths(STANDARD_CELLS_LVT)	$paths(SC_ROOT)/LVT
+set paths(STANDARD_CELLS_LVT)	$paths(SC_ROOT)/gsclib045_lvt
 lappend paths(LIB_paths) "$paths(STANDARD_CELLS_LVT)/lib/"
-set paths(STANDARD_CELLS_HVT)	$paths(SC_ROOT)/HVT
+set paths(STANDARD_CELLS_HVT)	$paths(SC_ROOT)/gsclib045_hvt
 lappend paths(LIB_paths) "$paths(STANDARD_CELLS_HVT)/lib/"
 
 # General
 set tech(LIBRARY_HAS_ENDCAPS) "YES"
-set tech(STANDARD_CELL_SITE) <LEF SITE name>
+set tech(STANDARD_CELL_SITE) CoreSite
 set tech(STANDARD_CELL_VDD) VDD
 set tech(STANDARD_CELL_GND) VSS
 

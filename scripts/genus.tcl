@@ -2,7 +2,7 @@
 #     DEFINE THE NAME OF THE TOPLEVEL DESIGN       #
 #       and variables specific to this run         #
 ####################################################
-set design(TOPLEVEL) "lp_riscv_top"
+set design(TOPLEVEL) "bcd_digit"
 
 
 # Variables
