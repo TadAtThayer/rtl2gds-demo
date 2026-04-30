@@ -6,9 +6,9 @@
 -timescale 1ns/1ps
 +bus_conflict_off
 -define RTL
-#-f ../sourcecode/dut_src_list.txt
--f ../sourcecode/tb/tb_riscv_rtl_src_list.txt
+-f ../sourcecode/dut_src_list.txt
+../sourcecode/tb/bcd_digit_tb.vhd
 
 # Optionally add a tcl script to run upon Xcelium invocation
--input ../scripts/simulation.tcl
-
+# -input ../scripts/simulation.tcl
+-top bcd_digit_tb
