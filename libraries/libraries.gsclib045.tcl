@@ -16,13 +16,13 @@ set tech(STANDARD_CELL_GND) VSS
 
 # LEFS
 
-set tech_files(TECHNOLOGY_LEF) $paths(TECHNOLOGY_FILES)/lef/${METAL_STACK}/sc${TRACKS}_tech.lef
+set tech_files(TECHNOLOGY_LEF) $paths(TECHNOLOGY_FILES)/lef/gsclib045_tech.lef
     set tech_files(ALL_LEFS) [list $tech_files(TECHNOLOGY_LEF)] ; # list of all lefs for init_design
-set tech_files(STANDARD_CELLS_RVT_LEF) $paths(STANDARD_CELLS_RVT)/lef/sc${TRACKS}_RVT.lef
+set tech_files(STANDARD_CELLS_RVT_LEF) $paths(STANDARD_CELLS_RVT)/lef/gsclib045_macro.lef
     lappend tech_files(ALL_LEFS) $tech_files(STANDARD_CELLS_RVT_LEF)
-set tech_files(STANDARD_CELLS_LVT_LEF) $paths(STANDARD_CELLS_LVT)/lef/sc${TRACKS}_LVT.lef
+set tech_files(STANDARD_CELLS_LVT_LEF) $paths(STANDARD_CELLS_LVT)/lef/gsclib045_lvt_macro.lef
     lappend tech_files(ALL_LEFS) $tech_files(STANDARD_CELLS_LVT_LEF)
-set tech_files(STANDARD_CELLS_HVT_LEF) $paths(STANDARD_CELLS_HVT)/lef/sc${TRACKS}_HVT.lef
+set tech_files(STANDARD_CELLS_HVT_LEF) $paths(STANDARD_CELLS_HVT)/lef/gsclib045_hvt_macro.lef
     lappend tech_files(ALL_LEFS) $tech_files(STANDARD_CELLS_HVT_LEF)
 # Get rid of annoying messages due to loading standard cell library LEFs
 lappend tech(LEF_SUPPRESS_MESSAGES_GENUS) {*}"message-1 message-2"
@@ -34,25 +34,25 @@ set tech(TEMPERATURE_TC) 25
 set tech(TEMPERATURE_WC) 125
 
 # Libs
-set tech_files(STANDARD_CELLS_RVT_BC_LIB) $paths(STANDARD_CELLS_RVT)/lib/sc${TRACKS}_<bc corner>_RVT.lib
+set tech_files(STANDARD_CELLS_RVT_BC_LIB) $paths(STANDARD_CELLS_RVT)/timing/fast_vdd1v0_basicCells.lib
     lappend tech_files(ALL_BC_LIBS) [list $tech_files(STANDARD_CELLS_RVT_BC_LIB)] ; # list of all libs for init_design
-set tech_files(STANDARD_CELLS_RVT_WC_LIB) $paths(STANDARD_CELLS_RVT)/lib/sc${TRACKS}_<wc corner>_RVT.lib
+set tech_files(STANDARD_CELLS_RVT_WC_LIB) $paths(STANDARD_CELLS_RVT)/timing/slow_vdd1v0_basicCells.lib
     lappend tech_files(ALL_WC_LIBS) [list $tech_files(STANDARD_CELLS_RVT_WC_LIB)] ; # list of all libs for init_design
-set tech_files(STANDARD_CELLS_RVT_TC_LIB) $paths(STANDARD_CELLS_RVT)/lib/sc${TRACKS}_<tc corner>_RVT.lib
+set tech_files(STANDARD_CELLS_RVT_TC_LIB) $paths(STANDARD_CELLS_RVT)/timing/slow_vdd1v0_basicCells.lib
     lappend tech_files(ALL_TC_LIBS) [list $tech_files(STANDARD_CELLS_RVT_TC_LIB)] ; # list of all libs for init_design
 
-set tech_files(STANDARD_CELLS_LVT_BC_LIB) $paths(STANDARD_CELLS_LVT)/lib/sc${TRACKS}_<bc corner>_LVT.lib
+set tech_files(STANDARD_CELLS_LVT_BC_LIB) $paths(STANDARD_CELLS_LVT)/timing/fast_vdd1v0_basicCells_lvt.lib
     lappend tech_files(ALL_BC_LIBS) [list $tech_files(STANDARD_CELLS_LVT_BC_LIB)] ; # list of all libs for init_design
-set tech_files(STANDARD_CELLS_LVT_WC_LIB) $paths(STANDARD_CELLS_LVT)/lib/sc${TRACKS}_<wc corner>_LVT.lib
+set tech_files(STANDARD_CELLS_LVT_WC_LIB) $paths(STANDARD_CELLS_LVT)/timing/slow_vdd1v0_basicCells_lvt.lib
     lappend tech_files(ALL_WC_LIBS) [list $tech_files(STANDARD_CELLS_LVT_WC_LIB)] ; # list of all libs for init_design
-set tech_files(STANDARD_CELLS_LVT_TC_LIB) $paths(STANDARD_CELLS_LVT)/lib/sc${TRACKS}_<tc corner>_LVT.lib
+set tech_files(STANDARD_CELLS_LVT_TC_LIB) $paths(STANDARD_CELLS_LVT)/timing/slow_vdd1v0_basicCells_lvt.lib
     lappend tech_files(ALL_TC_LIBS) [list $tech_files(STANDARD_CELLS_LVT_TC_LIB)] ; # list of all libs for init_design
 
-set tech_files(STANDARD_CELLS_HVT_BC_LIB) $paths(STANDARD_CELLS_HVT)/lib/sc${TRACKS}_<bc corner>_HVT.lib
+set tech_files(STANDARD_CELLS_HVT_BC_LIB) $paths(STANDARD_CELLS_HVT)/timing/fast_vdd1v0_basicCells_hvt.lib
     lappend tech_files(ALL_BC_LIBS) [list $tech_files(STANDARD_CELLS_HVT_BC_LIB)] ; # list of all libs for init_design
-set tech_files(STANDARD_CELLS_HVT_WC_LIB) $paths(STANDARD_CELLS_HVT)/lib/sc${TRACKS}_<wc corner>_HVT.lib
+set tech_files(STANDARD_CELLS_HVT_WC_LIB) $paths(STANDARD_CELLS_HVT)/timing/slow_vdd1v0_basicCells_hvt.lib
     lappend tech_files(ALL_WC_LIBS) [list $tech_files(STANDARD_CELLS_HVT_WC_LIB)] ; # list of all libs for init_design
-set tech_files(STANDARD_CELLS_HVT_TC_LIB) $paths(STANDARD_CELLS_HVT)/lib/sc${TRACKS}_<tc corner>_HVT.lib
+set tech_files(STANDARD_CELLS_HVT_TC_LIB) $paths(STANDARD_CELLS_HVT)/timing/slow_vdd1v0_basicCells_hvt.lib
     lappend tech_files(ALL_TC_LIBS) [list $tech_files(STANDARD_CELLS_HVT_TC_LIB)] ; # list of all libs for init_design
 # Get rid of annoying messages due to loading standard cell library LIBs
 lappend tech(LIB_SUPPRESS_MESSAGES_GENUS) {*}"message-5 message-6"
@@ -77,9 +77,9 @@ set tech_files(STANDARD_CELLS_HVT_OA) $paths(STANDARD_CELLS_HVT)/oa
 
 
 # For SDC
-set tech(SDC_DRIVING_CELL) <mid sized buffer>
-set tech(CCOPT_DRIVING_PIN) <mid sized buffer>/Y
-set tech(SDC_LOAD_PIN) <mid sized buffer>/A
+set tech(SDC_DRIVING_CELL) BUFFX4  
+set tech(CCOPT_DRIVING_PIN) BUFFX4/Y
+set tech(SDC_LOAD_PIN) BUFFX4/A
 
 
 # Physical Cells

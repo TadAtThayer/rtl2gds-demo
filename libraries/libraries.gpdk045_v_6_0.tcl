@@ -3,7 +3,7 @@
 #    to support various standard cell libraries
 #
 set METAL_STACK NotSureWhatMetalStackShouldBeSetTo
-set TRACKS  NotSureWhatTracksShouldBeSetTo
+set TRACKS  .
 set_db design_process_node 45 ; # used by the set_db design_tech_node command that is loaded later
 
 

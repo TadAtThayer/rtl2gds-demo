@@ -30,7 +30,7 @@ source ../scripts/settings.tcl -quiet
 # Load the library paths and definitions for this technology
 source ../libraries/libraries.$TECHNOLOGY.tcl -quiet
 source ../libraries/libraries.$SC_TECHNOLOGY.tcl -quiet
-source ../libraries/libraries.$SRAM_TECHNOLOGY.tcl -quiet
+#source ../libraries/libraries.$SRAM_TECHNOLOGY.tcl -quiet
 if {$design(FULLCHIP_OR_MACRO)=="FULLCHIP"} {
     source ../libraries/libraries.$IO_TECHNOLOGY.tcl -quiet
 }
@@ -89,7 +89,7 @@ enics_message "$design(DESIGN_SUPPRESS_MESSAGES_GENUS)" low
 suppress_messages $design(DESIGN_SUPPRESS_MESSAGES_GENUS)
 
 set_db init_hdl_search_path $design(hdl_search_paths)
-read_hdl -language sv -f $design(read_hdl_list)
+read_hdl -language vhdl -f $design(read_hdl_list)
 
 
 
