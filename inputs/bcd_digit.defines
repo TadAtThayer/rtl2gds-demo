@@ -15,16 +15,16 @@ set IO_TECHNOLOGY	"" ; # Name of IO Library (usually used in path to files)
 #############################################
 ###### Clocks
 # All clocks will be defined in order in three lists for SDC automation: clock_list, clock_port_list, clock_period_list
-set design(CLK_NAME) "CLK" ; # Name of clock to be used throughout the design
+set design(CLK_NAME) "clk" ; # Name of clock to be used throughout the design
     set design(clock_list) [list $design(CLK_NAME)]
-set design(CLK_PORT) "PAD_CLK" ; # Name of Verilog port/pin for create_clock
+set design(CLK_PORT) "clk" ; # Name of Verilog port/pin for create_clock
     set design(clock_port_list) [list $design(CLK_PORT)]
 set design(CLK_PERIOD) 20.0 ; # Period of clock for SDC definition
     set design(clock_period_list) [list $design(CLK_PERIOD)]
 # For additional clocks, lappend to clock_list, clock_port_list, clock_period_list
 
 # Reset Port from Verilog
-set design(RST_PORT) "PAD_RST_N"
+set design(RST_PORT) "reset"
 
 # Scan Enable Port from Verilog
 if {$design(HAS_SCAN)=="yes"} {
