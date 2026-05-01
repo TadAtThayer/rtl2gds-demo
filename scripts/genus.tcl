@@ -2,7 +2,7 @@
 #     DEFINE THE NAME OF THE TOPLEVEL DESIGN       #
 #       and variables specific to this run         #
 ####################################################
-set design(TOPLEVEL) "lp_riscv_top"
+set design(TOPLEVEL) "bcd_digit"
 
 
 # Variables
@@ -30,7 +30,7 @@ source ../scripts/settings.tcl -quiet
 # Load the library paths and definitions for this technology
 source ../libraries/libraries.$TECHNOLOGY.tcl -quiet
 source ../libraries/libraries.$SC_TECHNOLOGY.tcl -quiet
-source ../libraries/libraries.$SRAM_TECHNOLOGY.tcl -quiet
+#### source ../libraries/libraries.$SRAM_TECHNOLOGY.tcl -quiet
 if {$design(FULLCHIP_OR_MACRO)=="FULLCHIP"} {
     source ../libraries/libraries.$IO_TECHNOLOGY.tcl -quiet
 }
