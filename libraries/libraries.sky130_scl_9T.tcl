@@ -1,8 +1,9 @@
 # Library setting for your Standard Cell libraries
 
 # Libs
-#### set paths(STANDARD_CELLS_RVT)	$paths(SC_ROOT)/RVT
-#### lappend paths(LIB_paths) "$paths(STANDARD_CELLS_RVT)/lib/"
+set paths(STANDARD_CELLS_RVT) $paths(SC_ROOT)/sky130_scl_9T
+lappend paths(LIB_paths) "$paths(STANDARD_CELLS_RVT)/lib/"
+
 #### set paths(STANDARD_CELLS_LVT)	$paths(SC_ROOT)/LVT
 #### lappend paths(LIB_paths) "$paths(STANDARD_CELLS_LVT)/lib/"
 #### set paths(STANDARD_CELLS_HVT)	$paths(SC_ROOT)/HVT
@@ -16,10 +17,13 @@
 #### 
 #### # LEFS
 #### 
-#### set tech_files(TECHNOLOGY_LEF) $paths(TECHNOLOGY_FILES)/lef/${METAL_STACK}/sc${TRACKS}_tech.lef
-####     set tech_files(ALL_LEFS) [list $tech_files(TECHNOLOGY_LEF)] ; # list of all lefs for init_design
-#### set tech_files(STANDARD_CELLS_RVT_LEF) $paths(STANDARD_CELLS_RVT)/lef/sc${TRACKS}_RVT.lef
-####     lappend tech_files(ALL_LEFS) $tech_files(STANDARD_CELLS_RVT_LEF)
+
+set tech_files(TECHNOLOGY_LEF) $paths(TECHNOLOGY_FILES)/sky130_scl_9T_tech/lef/sky130_scl_9T.tlef
+set tech_files(ALL_LEFS) [list $tech_files(TECHNOLOGY_LEF)] ; # list of all lefs for init_design
+
+set tech_files(STANDARD_CELLS_RVT_LEF) $paths(STANDARD_CELLS_RVT)/lef/sky130_scl_9T.lef
+lappend tech_files(ALL_LEFS) $tech_files(STANDARD_CELLS_RVT_LEF)
+
 #### set tech_files(STANDARD_CELLS_LVT_LEF) $paths(STANDARD_CELLS_LVT)/lef/sc${TRACKS}_LVT.lef
 ####     lappend tech_files(ALL_LEFS) $tech_files(STANDARD_CELLS_LVT_LEF)
 #### set tech_files(STANDARD_CELLS_HVT_LEF) $paths(STANDARD_CELLS_HVT)/lef/sc${TRACKS}_HVT.lef
@@ -28,18 +32,23 @@
 #### lappend tech(LEF_SUPPRESS_MESSAGES_GENUS) {*}"message-1 message-2"
 #### lappend tech(LEF_SUPPRESS_MESSAGES_INNOVUS) {*}"message-3 message-4"
 #### 
-#### # Temperatures for Corners
-#### set tech(TEMPERATURE_BC) -40
-#### set tech(TEMPERATURE_TC) 25
-#### set tech(TEMPERATURE_WC) 125
+
+# Temperatures for Corners
+set tech(TEMPERATURE_BC) -40
+set tech(TEMPERATURE_TC) 25
+set tech(TEMPERATURE_WC) 125
 #### 
-#### # Libs
-#### set tech_files(STANDARD_CELLS_RVT_BC_LIB) $paths(STANDARD_CELLS_RVT)/lib/sc${TRACKS}_<bc corner>_RVT.lib
-####     lappend tech_files(ALL_BC_LIBS) [list $tech_files(STANDARD_CELLS_RVT_BC_LIB)] ; # list of all libs for init_design
-#### set tech_files(STANDARD_CELLS_RVT_WC_LIB) $paths(STANDARD_CELLS_RVT)/lib/sc${TRACKS}_<wc corner>_RVT.lib
-####     lappend tech_files(ALL_WC_LIBS) [list $tech_files(STANDARD_CELLS_RVT_WC_LIB)] ; # list of all libs for init_design
-#### set tech_files(STANDARD_CELLS_RVT_TC_LIB) $paths(STANDARD_CELLS_RVT)/lib/sc${TRACKS}_<tc corner>_RVT.lib
-####     lappend tech_files(ALL_TC_LIBS) [list $tech_files(STANDARD_CELLS_RVT_TC_LIB)] ; # list of all libs for init_design
+
+# Libs
+set tech_files(STANDARD_CELLS_RVT_BC_LIB) $paths(STANDARD_CELLS_RVT)/lib/sky130_ff_1.98_0_nldm.lib
+lappend tech_files(ALL_BC_LIBS) [list $tech_files(STANDARD_CELLS_RVT_BC_LIB)] ; # list of all libs for init_design
+
+set tech_files(STANDARD_CELLS_RVT_WC_LIB) $paths(STANDARD_CELLS_RVT)/lib/sky130_ss_1.62_125_nldm.lib
+lappend tech_files(ALL_WC_LIBS) [list $tech_files(STANDARD_CELLS_RVT_WC_LIB)] ; # list of all libs for init_design
+
+set tech_files(STANDARD_CELLS_RVT_TC_LIB) $paths(STANDARD_CELLS_RVT)/lib/sky130_tt_1.8_25_nldm.lib
+lappend tech_files(ALL_TC_LIBS) [list $tech_files(STANDARD_CELLS_RVT_TC_LIB)] ; # list of all libs for init_design
+
 #### 
 #### set tech_files(STANDARD_CELLS_LVT_BC_LIB) $paths(STANDARD_CELLS_LVT)/lib/sc${TRACKS}_<bc corner>_LVT.lib
 ####     lappend tech_files(ALL_BC_LIBS) [list $tech_files(STANDARD_CELLS_LVT_BC_LIB)] ; # list of all libs for init_design
@@ -67,8 +76,10 @@
 #### set tech_files(STANDARD_CELLS_HVT_VERILOG) $paths(STANDARD_CELLS_HVT)/verilog/hvt.v
 ####     lappend tech_files(ALL_BEHAVIORAL_MODELS) [list $tech_files(STANDARD_CELLS_HVT_VERILOG)]
 #### 
-#### # OA
-#### set tech_files(STANDARD_CELLS_RVT_OA) $paths(STANDARD_CELLS_RVT)/oa
+
+# OA
+set tech_files(STANDARD_CELLS_RVT_OA) $paths(STANDARD_CELLS_RVT)/oa/sky130_scl_9T
+
 #### set tech_files(STANDARD_CELLS_LVT_OA) $paths(STANDARD_CELLS_LVT)/oa
 #### set tech_files(STANDARD_CELLS_HVT_OA) $paths(STANDARD_CELLS_HVT)/oa
 #### 
@@ -76,10 +87,12 @@
 #### 
 #### 
 #### 
-#### # For SDC
-#### set tech(SDC_DRIVING_CELL) <mid sized buffer>
-#### set tech(CCOPT_DRIVING_PIN) <mid sized buffer>/Y
-#### set tech(SDC_LOAD_PIN) <mid sized buffer>/A
+
+# For SDC
+set tech(SDC_DRIVING_CELL) BUFX4
+set tech(CCOPT_DRIVING_PIN) BUFX4/Y
+set tech(SDC_LOAD_PIN) BUFX4/A
+
 #### 
 #### 
 #### # Physical Cells

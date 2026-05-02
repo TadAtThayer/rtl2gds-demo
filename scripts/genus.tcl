@@ -53,15 +53,15 @@ enics_print_debug_data w $debug_file "after everything was loaded" $var_list $di
 ###########################
 enics_start_stage "init_design"
 
-# Suppress messages
-enics_message "Suppressing the following messages that are reported due to the library definitions:" 
-enics_message "$tech(LIB_SUPPRESS_MESSAGES_GENUS)" low
-suppress_messages $tech(LIB_SUPPRESS_MESSAGES_GENUS)
-
-# Load MMMC File
-# --------------
-enics_message "Loading MMMC File"
-read_mmmc $design(mmmc_view_file)
+#### # Suppress messages
+#### enics_message "Suppressing the following messages that are reported due to the library definitions:" 
+#### enics_message "$tech(LIB_SUPPRESS_MESSAGES_GENUS)" low
+#### suppress_messages $tech(LIB_SUPPRESS_MESSAGES_GENUS)
+#### 
+#### # Load MMMC File
+#### # --------------
+#### enics_message "Loading MMMC File"
+#### read_mmmc $design(mmmc_view_file)
 
 
 
@@ -69,9 +69,9 @@ read_mmmc $design(mmmc_view_file)
 #    Read LEF files          #
 ##############################
 # Suppress messages
-enics_message "Suppressing the following messages that are reported due to the LEF definitions:" 
-enics_message "$tech(LEF_SUPPRESS_MESSAGES_GENUS)" low
-suppress_messages $tech(LEF_SUPPRESS_MESSAGES_GENUS)
+#### enics_message "Suppressing the following messages that are reported due to the LEF definitions:" 
+#### enics_message "$tech(LEF_SUPPRESS_MESSAGES_GENUS)" low
+#### suppress_messages $tech(LEF_SUPPRESS_MESSAGES_GENUS)
 
 # Read LEFs
 # ---------

@@ -17,14 +17,16 @@ set paths(TECHNOLOGY_FILES) $paths(SC_ROOT)
 #### set tech_files(CAPTABLE_BC) $paths(TECHNOLOGY_FILES)/<path to captables>/rcbest.captbl
 #### set tech_files(CAPTABLE_TC) $paths(TECHNOLOGY_FILES)/<path to captables>/typical.captbl
 #### set tech_files(CAPTABLE_WC) $paths(TECHNOLOGY_FILES)/<path to captables>/rcworst.captbl
-#### set paths(QRC_ROOT) $paths(PDK_ROOT)/<path to qrc tech files>
-#### set tech_files(QRCTECH_FILE_TYPICAL) $paths(QRC_ROOT)/typical/qrcTechFile
+
+set paths(QRC_ROOT) $paths(PDK_ROOT)/quantus/extraction/
+set tech_files(QRCTECH_FILE_TYPICAL) $paths(QRC_ROOT)/typical/qrcTechFile
+
 #### set tech_files(QRCTECH_FILE_CBEST) $paths(QRC_ROOT)/cbest/qrcTechFile
 #### set tech_files(QRCTECH_FILE_CWORST) $paths(QRC_ROOT)/cworst/qrcTechFile
 #### set tech_files(QRCTECH_FILE_RCBEST) $paths(QRC_ROOT)/rcbest/qrcTechFile
 #### set tech_files(QRCTECH_FILE_RCWORST) $paths(QRC_ROOT)/rcworst/qrcTechFile
 #### set tech_files(QRCTECH_FILE_BC) $tech_files(QRCTECH_FILE_RCBEST)
-#### set tech_files(QRCTECH_FILE_TC) $tech_files(QRCTECH_FILE_TYPICAL)
+set tech_files(QRCTECH_FILE_TC) $tech_files(QRCTECH_FILE_TYPICAL)
 #### set tech_files(QRCTECH_FILE_WC) $tech_files(QRCTECH_FILE_RCWORST)
 
 # List of technology-specific messages to suppress
