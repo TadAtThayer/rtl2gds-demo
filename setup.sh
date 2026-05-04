@@ -7,7 +7,7 @@ git submodule update --init --recursive --remote
 module unload cadence-SPECTRE cadence-IC cadence-PVS cadence-DDI cadence-XCELIUM
 
 # Grab the correct versions of the tools
-module load cadence-XCELIUM/22.09-2 cadence-DDI/25.1
+module load cadence-XCELIUM/22.09-2 cadence-DDI/23.1
 
 
 
