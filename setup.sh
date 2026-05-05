@@ -11,10 +11,11 @@ module load cadence-XCELIUM/22.09-2 cadence-DDI/23.1
 
 export RAK=/thayerfs/courses/26spring/engs084/workspace/rak/Genus_CUI_RAK
 
-ln -sf $RAK/LEF labs/
-ln -sf $RAK/LIB labs/
-ln -sf $RAK/RTL labs/
-ln -sf $RAK/constraints labs/
+ln -sf $RAK/LEF labs/genus/
+ln -sf $RAK/LIB labs/genus/
+ln -sf $RAK/RTL labs/genus/
+ln -sf $RAK/constraints labs/genus/
+
 
 
 
