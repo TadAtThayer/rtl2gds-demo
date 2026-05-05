@@ -14,6 +14,7 @@ export RAK=/thayerfs/courses/26spring/engs084/workspace/rak/Genus_CUI_RAK
 ln -sf $RAK/LEF labs/
 ln -sf $RAK/LIB labs/
 ln -sf $RAK/RTL labs/
+ln -sf $RAK/constraints labs/
 
 
 
