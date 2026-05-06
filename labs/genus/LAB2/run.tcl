@@ -371,7 +371,7 @@ report_scan_setup > $_REPORTS_PATH/${DESIGN}-DFTsetup_final
 write_scandef > ${DESIGN}-scanDEF
 write_dft_abstract_model > ${DESIGN}-scanAbstract
 write_hdl -abstract > ${DESIGN}-logicAbstract
-write_script -analyze_all_scan_chains > ${DESIGN}-writeScript-analyzeAllScanChains
+##write_script -analyze_all_scan_chains > ${DESIGN}-writeScript-analyzeAllScanChains
 ## check_atpg_rules -library <Verilog simulation library files> -compression -directory $MODUS_WORKDIR
 ## write_dft_jtag_boundary_verification -library <Verilog structural library files> -directory $MODUS_WORKDIR 
 #write_dft_atpg -library <Verilog structural library files> -compression -directory $MODUS_WORKDIR 
